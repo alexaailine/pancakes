@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pancakes 🥞</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: linear-gradient(
+          110.3deg,
+          rgb(238, 179, 123) 8.7%,
+          rgb(216, 103, 77) 47.5%,
+          rgb(114, 43, 54) 70.1%
+        );
+      }
+      h1,
+      h2 {
+        text-align: center;
+      }
+      h1 {
+        color: #b33b01;
+        font-size: 50px;
+      }
+
+      h2 {
+        color: #000;
+        border: 1px solid #b33b01;
+        padding: 15px;
+        margin: 50px auto;
+        max-width: 600px;
+        font-size: 18px;
+        border-radius: 20px 20px 20px 20px;
+        border-width: 0 auto;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 16px;
+        margin: 15px auto;
+        max-width: 600px;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px 60px;
+        background: #ffffff;
+        border-radius: 30px 30px;
+      }
+      .learn-more {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: #b33b01;
+        font-weight: bold;
+        font-size: 12px;
+        margin: 15px auto;
+      }
+
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+      button {
+        background: #b33b01;
+        display: block;
+        margin: 20px auto;
+        color: #e2d1c3;
+        padding: 15px 20px;
+        border-color: #b33b01;
+        border-radius: 10px;
+        border: none;
+        font-size: 20px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+
+      .footer {
+        text-align: center;
+        font-size: small;
+        font-family: "Courier New", Courier, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I Love Pancakes</h1>
+      <h2>Especially lemon and vanilla.</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/049/829/original/119674.jpeg?1666501735"
+        alt="fluffy Pancakes"
+      />
+      <p>
+        A pancake is a flat cake, often thin and round, prepared from a
+        starch-based batter that may contain eggs, milk and butter and cooked on
+        a hot surface such as a griddle or frying pan, often frying with oil or
+        butter. It is a type of batter bread.
+      </p>
+      <a
+        href="https://en.wikipedia.org/wiki/Pancake"
+        ;
+        target="_blank"
+        class="learn-more"
+      >
+        Learn more on wikipedia.
+      </a>
+
+      <button class="welcome-button">👉Welcome, Pancakes</button>
+      <p class="footer">
+        This page was build by
+        <a href="https://www.instagram.com/alexaailine/" target="_blank">
+          Alexa Ailine
+        </a>
+      </p>
+    </div>
+    <script>
+      function welcome() {
+        let name = prompt("What's your name?");
+        let email = prompt("What's your email?");
+        let emoji = prompt("What's your favourite emoji?");
+        let h1 = document.querySelector("h1");
+
+        h1.innerHTML =
+          "Thank you, " +
+          name +
+          "! We'll be in touch by email, meanwhile have lots of pancakes!" +
+          emoji;
+      }
+      let welcomeButton = document.querySelector(".welcome-button");
+      welcomeButton.addEventListener("click", welcome);
+    </script>
+  </body>
+</html>
